@@ -15,7 +15,7 @@ public class MathPlus {
         if(a > 0 && b > 0) { // If "a" and "b" not 0
             return sqrt(a * a + b * b); // Calls the sqrt function with the power of "a" incremented by the power of "b"
         }
-        return 0; // If the condition falls back, we will return 0
+        return 0;
     }
     public static double[] median (double[] list) {
         if(list.length > 0 ) { // Checks if the list is empty
@@ -44,5 +44,16 @@ public class MathPlus {
             }
         }
         return var2; // Returns the result
+    }
+    public static boolean isPrime(double number) {
+        if(number < 2) { // Checks if the input is less than 2
+            return false;
+        }
+        for(int i = 2; i < number; i++) {
+            if(number%i == 0) { // If input divided by the current number at loop and the remainder is 0
+                return false;
+            }
+        }
+        return true;
     }
 }
