@@ -14,7 +14,8 @@ public class MathPlus {
 
     public static double pythagoras(double a, double b) {
         if (a > 0 && b > 0) { // If "a" and "b" not 0
-            return sqrtroot(a * a + b * b); // Calls the sqrt function with the power of "a" incremented by the power of "b"
+            return sqrtroot(a * a + b * b); // Calls the sqrt function with the power of "a" incremented by the power of
+                                            // "b"
         }
         return 0;
     }
@@ -61,4 +62,7 @@ public class MathPlus {
         return true;
     }
 
+    public static double DegtoRad(double deg) {
+        return deg * 3.141592653589793 / 180;
+    }
 }
