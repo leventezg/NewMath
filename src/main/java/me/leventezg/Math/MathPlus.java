@@ -63,6 +63,6 @@ public class MathPlus {
     }
 
     public static double DegtoRad(double deg) {
-        return deg * 3.141592653589793 / 180;
+        return deg * (3.141592653589793 / 180);
     }
 }
