@@ -65,4 +65,18 @@ public class MathPlus {
     public static double DegtoRad(double deg) {
         return deg * (3.141592653589793 / 180);
     }
+    // Taylor row formule
+    public static double sin(double x) {
+        // Converting -2π and 2π
+        x = x % (2 * 3.141592653589793);
+        double finalnum = 0;
+        double tag = x;
+        int n = 1;
+        for (int i = 1; i <= 10; i++) {
+            finalnum += tag;
+            n += 2;
+            tag *= -1 * x * x / (n * (n - 1));
+        }
+        return finalnum;
+    }
 }
